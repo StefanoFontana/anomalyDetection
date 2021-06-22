@@ -1,0 +1,1 @@
+python.exe .\convert.py  --source .\data\RVS-6577_01K116_J4_10_10_0_1_2020-12-17_14-25-57.tdms --out .\output\RVS-6577_01K116_J4_10_10_0_1_2020-12-17_14-25-57.csv
