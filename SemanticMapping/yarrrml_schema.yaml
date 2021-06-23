@@ -1,0 +1,28 @@
+prefixes:
+  ex: "http://example.com/"
+
+mappings:
+    sensor:
+        sources:
+            - ['sensors.csv~csv']
+        s: http://example.com/sensor/$(id)
+        po:
+            - [a, sosa:Sensor]
+            - [rdfs:label, $(label)]
+            
+    observations:
+        sources:
+            - ['observations.csv~csv']
+        s: http://example.com/observations/$(id)
+        po:
+            - [a, sosa:Observation]
+            - [sosa:hasSimpleResult, $(value)]
+            - [sosa:resultTime, $(timestamp)]
+            - p: sosa:madeBySensor
+              o:
+                - mapping: sensor
+                  condition:
+                    function: equal
+                    parameters:
+                      - [str1, $(sensor)]
+                      - [str2, $(id)]

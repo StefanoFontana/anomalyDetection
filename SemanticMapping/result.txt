@@ -1,0 +1,6 @@
+<http://example.com/sensor/001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Sensor>.
+<http://example.com/sensor/001> <http://www.w3.org/2000/01/rdf-schema#label> "Person Counter Sensor".
+<http://example.com/observations/123456> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation>.
+<http://example.com/observations/123456> <http://www.w3.org/ns/sosa/hasSimpleResult> "345".
+<http://example.com/observations/123456> <http://www.w3.org/ns/sosa/resultTime> "2017-06-06T12:36:12Z".
+<http://example.com/observations/123456> <http://www.w3.org/ns/sosa/madeBySensor> <http://example.com/sensor/001>.
